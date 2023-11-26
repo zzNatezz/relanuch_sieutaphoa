@@ -1,3 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+@mixin align_Icon_Text_5px{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+@mixin icon_color_headr{
+    background-color: #FFFFFF;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+}
 .header-background{
     background-color: #EEEEEE;
+    display: flex;
+    justify-content: space-around;
+    padding-block: 5px;
+    .compo_l{
+        display: flex;
+        column-gap: 40px;
+        div{
+            @include align_Icon_Text_5px();
+        }
+        .compo_l_s{
+            column-gap: 15px;
+        }
+    }
+    .compo_r{
+        display: flex;
+        justify-content: center;
+        column-gap: 40px !important;
+        @include align_Icon_Text_5px();}
+
+        .compo_r_f{
+            @include icon_color_headr();
+        }
+
+        .compo_r_s{
+            @include icon_color_headr();
+            display: flex;
+            column-gap: 20px !important;
+            div{
+                @include align_Icon_Text_5px();
+            }
+            .compo_buy{
+                border-left: 1px solid grey;
+                padding-left: 10px;
+            }
+            
+        }
 }
