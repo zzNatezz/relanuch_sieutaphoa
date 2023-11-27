@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+@mixin alignHeaderText{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: left;
+    ul{
+        list-style-type: none;
+        li{
+            padding-top: 5px;
+        }
+        li:hover {
+            color: rgb(0, 225, 255);
+            text-decoration: underline;
+        }
+    }
+}
+@mixin flex_with_column_20gap{
+    display: flex;
+    column-gap: 20px;
+
+}
+.Header_PopUp{
+    margin-top: 20px;
+    padding : 20px;
+    width: 1240px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 20px;
+    border: 1px solid aliceblue;
+    border-radius: 20px;
+    background-color: aliceblue;
+    .deparment{
+        @include flex_with_column_20gap();
+        padding-right: 20px;
+        border-right: 2px solid grey;
+        .depart-list{
+            @include alignHeaderText();
+        }
+    }
+    .tv-and-tech{
+        .tv-content{
+            @include flex_with_column_20gap();
+            .tv-video-list{
+                @include alignHeaderText();
+            }
+        }
+        .wearable-content{
+            margin-top: 20px;
+            @include flex_with_column_20gap();
+            .wearable-list{
+                @include alignHeaderText();
+            }
+        }
+    }
+    .computer{
+        @include flex_with_column_20gap();
+        .computer-list{
+            @include alignHeaderText();
+        }
+    }
+    .saving-and-phone{
+        .saving-content{
+            @include flex_with_column_20gap();
+            .saving-list{
+                @include alignHeaderText();
+            }
+        }
+        .cell-phone-content{
+            margin-top: 20px;
+            @include flex_with_column_20gap();
+            .phone-list{
+                @include alignHeaderText();
+            }
+        }
+    }
+}

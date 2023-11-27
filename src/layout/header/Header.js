@@ -2,14 +2,11 @@ import React from 'react';
 import Icon from '../imagin/icon/Icon';
 import Picture from '../imagin/picture/Picture';
 import "./Header.scss"
-import { HeaderInformation } from './Pop_up/Department/StoreInformation';
-
-const allDepar = HeaderInformation[0]['All Departments']
-console.log(allDepar);
-
+import RenderDepartment from './Pop_up/Department/Department';
 
 function Header() {
     return (
+        <>
         <div className='header-background'>
             <div className='compo_l'>
                 <div className='compo_l_f'>
@@ -38,6 +35,8 @@ function Header() {
                 </div>
             </div>
         </div>
+        <RenderDepartment />
+        </>
     );
 }
 
