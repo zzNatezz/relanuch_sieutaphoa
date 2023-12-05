@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.TotalLavazz-container{
+    display: flex;
+    column-gap: 40px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #EEEEEE;
+        width: 325px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        .pictures{
+            .avatar{
+                z-index: -1;
+            }
+            .heart-background{
+                position: relative;
+                bottom: 50px;
+                left: 85%;
+                width: 50px;
+                height: 50px;
+                z-index: 1;
+                border-radius: 50%;
+                background-color: white;
+                .heart{
+                    position: relative;
+                    top: 16px;
+                    left: 0;
+                    z-index: 1;
+                }
+
+            }
+        }
+        .coffee-NameAndType{
+            text-align: left;
+            padding-inline: 20px;
+            .type{
+                color: grey;
+            }
+        }
+        .coffee-bottom{
+            display: flex;
+            column-gap: 180px;
+            padding-bottom: 20px;
+        }
+    }
+}

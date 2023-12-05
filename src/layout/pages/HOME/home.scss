@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    .home-banner{
+        img{
+            width: 1340px;
+        }
+    }
+    .Browse-Categories{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        .Categories-title{
+            font-size: 30px !important;
+        }
+    }
+    .home-total-lav{
+        .header-total-lav{
+            text-align: left;
+            font-size: 30px !important;
+        }
+    }
+}

@@ -2,7 +2,9 @@ import React from 'react';
 import Icon from '../imagin/icon/Icon';
 import Picture from '../imagin/picture/Picture';
 import "./Header.scss"
-import RenderDepartment from './Pop_up/Department/Department';
+import { Header_Typpy } from './Pop_up/Header_Typpy/Header_Typpy';
+
+
 
 function Header() {
     return (
@@ -14,15 +16,20 @@ function Header() {
                     <div>Grocerymart</div>
                 </div>
                 <div className='compo_l_s'>
-                    <div>Departments  <img className="icon-header" src={Icon.arrowDown} alt="arrowDown" />  </div>
-                    <div>Grocery <img className="icon-header" src={Icon.arrowDown} alt="arrowDown" /></div>
-                    <div>Beauty <img className="icon-header" src={Icon.arrowDown} alt="arrowDown" /></div>
+                    <Header_Typpy
+                    Title = "Departments"
+                     />
+                    <Header_Typpy
+                    Title="Grocery" />
+                    <Header_Typpy
+                    Title= "Beauty"
+                     /> 
                 </div>
             </div>
             <div className='compo_r'>
                 <div className='compo_r_f'>
                     <img className="icon-header" src={Icon.search} alt="search" />
-                    
+
                 </div>
                 <div className='compo_r_s'>
                     <div><img className="icon-header" src={Icon.heart} alt="heart" /> 03 </div>
@@ -35,7 +42,6 @@ function Header() {
                 </div>
             </div>
         </div>
-        <RenderDepartment />
         </>
     );
 }

@@ -7,7 +7,7 @@
 @mixin align_Icon_Text_5px{
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 20px;
 }
 @mixin icon_color_headr{
     background-color: #FFFFFF;
@@ -24,13 +24,13 @@
     .compo_l{
         display: flex;
         column-gap: 40px;
-        div{
+        .compo_l_f{
             @include align_Icon_Text_5px();
         }
         .compo_l_s{
-            column-gap: 15px;
+            @include align_Icon_Text_5px();
         }
-    }
+    }   
     .compo_r{
         display: flex;
         justify-content: center;

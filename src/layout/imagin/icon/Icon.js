@@ -10,5 +10,23 @@ const Icon = {
     wearable : require('./WearableTechnologyT.svg').default,
     depart : require('.//Icon_Depart.svg').default,
     computer : require('./Computer.svg').default,
+    beauty : require('./Beauty.svg').default,
+    beverage : require('./Beverage.svg').default,
+    candy : require('./Candy.svg').default,
+    cocktails_caffe : require('./Cocktails_caffe.svg').default,
+    CommunitiesSp : require('./CommunitiesSports.svg').default,
+    feature_brands: require('./FeatureBrands.svg').default,
+    feature_shop : require('./FeatureShop.svg').default,
+    freshProduce : require('./FreshProduce.svg').default,
+    frozen : require('./Frozen.svg').default,
+    grocery : require('./Grocery.svg').default,
+    premiumBeauty : require('./PremiumBeauty.svg').default,
+    snack : require('./Snack.svg').default,
+    TrendingBeauty : require('./TrendingBeauty.svg').default,
+    BakeryBRead : require('./Bakery_Bread.svg').default,
+    Heart_active : require('./Heart_active.svg').default,
+    star: require('./Star.svg').default,
+    arror_right : require('./Arrow - Right 2.svg').default,
+    
 }
 export default Icon;

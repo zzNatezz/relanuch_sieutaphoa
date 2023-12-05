@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.Categories{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    .container{
+        padding: 20px;
+        display: flex;
+        gap : 20px;
+        background-color: #EEEEEE;
+        border-radius: 20px;
+        width: 450px;
+        .second-content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .second-content-detail{
+                text-align: start;
+            }
+        }
+    }
+}
