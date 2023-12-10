@@ -26,6 +26,11 @@
         column-gap: 40px;
         .compo_l_f{
             @include align_Icon_Text_5px();
+            .link-home{
+                @include align_Icon_Text_5px();
+                text-decoration: none;
+                color: black
+            }
         }
         .compo_l_s{
             @include align_Icon_Text_5px();

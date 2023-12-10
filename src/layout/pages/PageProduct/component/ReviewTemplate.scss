@@ -1,0 +1,22 @@
+.review-container{
+    background-color: #b8f0f6;
+    border-radius: 20px;
+    padding: 20px;
+    row-gap: 40px;
+    .ava-and-review{
+        display:flex;
+        column-gap: 10px;
+        .name-and-comment{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+    }
+    .rating-reviews{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}

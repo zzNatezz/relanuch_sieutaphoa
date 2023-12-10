@@ -8,6 +8,11 @@ const Picture = {
     coffeBlends : require('./coffeeBlends.png'),
     coffeeQualita : require('./coffeeQualita.png'),
     coffeeEspressBlack: require('./coffeEspressoBlack.png'),
+    product_CoffeeBean : require('./productDetail_coffeeBeans.png'),
+    hussain : require('./delwarHussain.png'),
+    hussen : require('./JakirHussen.png'),
+    ahmed : require('./JubedAhmed.png'),
+    
 }
 
 export default Picture;

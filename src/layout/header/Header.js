@@ -3,7 +3,7 @@ import Icon from '../imagin/icon/Icon';
 import Picture from '../imagin/picture/Picture';
 import "./Header.scss"
 import { Header_Typpy } from './Pop_up/Header_Typpy/Header_Typpy';
-
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -11,9 +11,9 @@ function Header() {
         <>
         <div className='header-background'>
             <div className='compo_l'>
-                <div className='compo_l_f'>
-                    <img src={Icon.logo} alt="" />
-                    <div>Grocerymart</div>
+            <div className='compo_l_f'>
+            <Link className='link-home' to ='/' > <img src={Icon.logo} alt="" />
+                    <div>Grocerymart</div></Link>
                 </div>
                 <div className='compo_l_s'>
                     <Header_Typpy
@@ -38,7 +38,7 @@ function Header() {
                     </div>
                 </div>
                 <div className='compo_r_t'>
-                    <img lassName="icon-header" src={Picture.avatar} alt="avatar" />
+                <Link to='/profileUser'><img lassName="icon-header" src={Picture.avatar} alt="avatar" /></Link>
                 </div>
             </div>
         </div>

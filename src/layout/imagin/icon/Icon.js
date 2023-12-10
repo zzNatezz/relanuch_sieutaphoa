@@ -27,6 +27,11 @@ const Icon = {
     Heart_active : require('./Heart_active.svg').default,
     star: require('./Star.svg').default,
     arror_right : require('./Arrow - Right 2.svg').default,
+    bag : require('./Bag.svg').default,
+    document : require('./Document.svg').default,
+    starthalf : require('./Star-half.svg').default,
+    startNone : require('./StarNone.svg').default,
+    startReview : require('./StarReview.svg').default,
     
 }
 export default Icon;

@@ -1,0 +1,174 @@
+$color_grey : #F6F6F6;
+$color-text-link : #9E9DA8;
+$color-blue : #77DAE6;
+.product-container{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    .product-link{
+        text-align: left;
+        width: 1340px;
+        background-color: $color_grey;
+        padding: 20px;
+        border-radius: 10px;
+        color: $color-text-link;
+        .span{
+            color: black;
+        }
+    }
+    .product-main{
+        display: flex;
+        justify-content: space-around;
+        column-gap: 30px;
+        width: 1340px;
+        .main-img{
+            width: 551px;
+            height: 507px;
+        }
+        .main-detail{
+            background-color:$color_grey;
+            padding: 60px;
+            .coffee-name{
+                text-align: left;
+                font-size: 40px;
+            }
+            .coffee-detail{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+                column-gap: 60px;
+
+                .detail{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 30px;
+                    .review{
+                        display: flex;          
+                        column-gap: 20px;
+                        align-items: center;
+                        align-content: flex-start;
+                    }
+                    .header2{
+                        text-align: left;
+                        font-size: 30px;
+                    }
+                    .quatity-unit{
+                        display: flex;
+                        align-content: flex-start;
+                        .number{
+                            width: 150px;
+                            padding: 3px;
+                            border-radius: 10px;
+                        }
+                        .unit{
+                            width: 100px;
+                            padding: 3px;
+                            border-radius: 10px;
+                        }
+                    }
+                    .size{
+                        display: flex;
+                        column-gap: 10px;
+                        justify-content: center;
+                        button{
+                            display: flex;
+                            column-gap: 10px;
+                            justify-content: center;
+                            width: 70px;
+                            border-radius: 10px;
+                            border: 1px dashed gray;
+                        }
+                        button:hover{
+                            background-color: #77DAE6;
+                        }   
+                    }   
+                }
+                .information{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 30px;
+                    .compare{
+                        display: flex;
+                        column-gap: 20px;
+                    }
+                    .delivery{
+                        display: flex;
+                        row-gap: 30px;
+                        column-gap: 20px;
+                        align-items: flex-start;
+                        .delivery-detail{
+                            display: flex;
+                            flex-direction: column;
+                            ;
+                            text-align: left;
+                        }
+                    }
+                    .pick-up{
+                        display: flex;
+                        row-gap: 30px;
+                        column-gap: 20px;
+                        align-items: flex-start;
+                        .pick-up-detail{
+                            display: flex;
+                            flex-direction: column;
+                            ;
+                            text-align: left;
+                        }
+                    }
+                    .payment{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 20px;
+                        border: 1px solid gold;
+                        border-radius: 10px;
+                        padding: 20px;
+                        align-content: flex-start;
+                        .price{
+                            display: flex;
+                            column-gap:10px;
+                            p{
+                                color: greenyellow;
+                            }
+                        }
+                        .total-price{
+                            text-align: left;
+                        }
+                        .add-to-cart{
+                            display: flex;
+                            column-gap: 20px;
+                            button{
+                                width: 180px;
+                                background-color: yellow;
+                                padding-block: 10px;
+                                border-radius: 10px;
+                                color: grey;
+                                border: 1px solid grey;
+                            }
+                            img {
+                                border: 1px solid grey;
+                                padding:10px;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .review-title{
+        display: flex;
+        align-content: flex-start;
+        column-gap: 60px;
+        width: 1340px;
+        color: $color-text-link;
+        :nth-child(3){
+            color: black;
+        }
+    }
+    .reviewTemplate{
+        display: flex;
+        column-gap: 40px;
+    }
+}
