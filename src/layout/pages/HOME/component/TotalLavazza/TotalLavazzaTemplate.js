@@ -6,7 +6,7 @@ import homeTotalLavAz from "../StoreInfor/homeTotalLavAz";
 import { AppContext } from "../../../../../AppContext/AppContext";
 
 function TotalLavazzaTemplate() {
-  const { updateHeart, cloneHomeLavaza } = useContext(AppContext)
+  const { updateHeart } = useContext(AppContext)
   return (
     <div className="TotalLavazz-container">
       {homeTotalLavAz.map((item, index) => (
