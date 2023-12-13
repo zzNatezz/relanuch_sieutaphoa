@@ -17,6 +17,10 @@
     border-radius: 10px;
 }
 .header-background{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
     background-color: #EEEEEE;
     display: flex;
     justify-content: space-around;
@@ -58,5 +62,8 @@
                 padding-left: 10px;
             }
             
+        }
+        .compo_r_t{
+            margin-top: 15px;
         }
 }

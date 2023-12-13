@@ -8,7 +8,7 @@ import TotalLavazzaTemplate from "./component/TotalLavazza/TotalLavazzaTemplate"
 function Home() {
     return ( 
         <>
-        <Header />
+        <Header/>
         <div className="main-container">
             <div className="home-banner">
                 <img src={Picture.homeBanner} alt="banner" />
@@ -27,7 +27,7 @@ function Home() {
 
             </div>
         </div>
-        </>
+       </>
         
     );
 }

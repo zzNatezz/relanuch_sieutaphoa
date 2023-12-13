@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Icon from '../imagin/icon/Icon';
 import Picture from '../imagin/picture/Picture';
 import "./Header.scss"
 import { Header_Typpy } from './Pop_up/Header_Typpy/Header_Typpy';
 import { Link } from 'react-router-dom';
+import { AppContext } from '../../AppContext/AppContext';
 
 
 function Header() {
+    const {heart} = useContext(AppContext)
     return (
         <>
         <div className='header-background'>
@@ -32,7 +34,7 @@ function Header() {
 
                 </div>
                 <div className='compo_r_s'>
-                    <div><img className="icon-header" src={Icon.heart} alt="heart" /> 03 </div>
+                    <div><img className="icon-header" src={Icon.heart} alt="heart" /> {heart}</div>
                     <div className='compo_buy'>
                         <img className="icon-header" src={Icon.buy} alt="buy" />    $ 63.0
                     </div>

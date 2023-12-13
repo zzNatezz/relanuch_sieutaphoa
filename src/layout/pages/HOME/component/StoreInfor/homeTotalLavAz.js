@@ -1,3 +1,4 @@
+import Icon from "../../../../imagin/icon/Icon";
 import Picture from "../../../../imagin/picture/Picture";
 
 const homeTotalLavAz = [
@@ -8,7 +9,8 @@ const homeTotalLavAz = [
       price: 47.0,
       review: "4.3",
       link : '/productcoffeeBeans',
-      getID : 'coffeeBeans'
+      getID : 'coffeeBeans',
+      heart : Icon.heart
     },
     {
       img: Picture.coffeBlends,
@@ -17,7 +19,8 @@ const homeTotalLavAz = [
       price: 53.0,
       review: "3.4",
       link: '/productPageCoffeeBlends',
-      getID : 'coffeeBlends'
+      getID : 'coffeeBlends',
+      heart : Icon.heart
     },
     {
       img: Picture.coffeeEspressBlack,
@@ -26,7 +29,8 @@ const homeTotalLavAz = [
       price: 99.99,
       review: "5.0",
       link : '/productPagecoffeeEspressBlack',
-      getID : 'coffeeEspressBlack'
+      getID : 'coffeeEspressBlack',
+      heart : Icon.heart
     },
     {
       img: Picture.coffeeQualita,
@@ -35,7 +39,8 @@ const homeTotalLavAz = [
       price: 38.65,
       review: "4.4",
       link : '/productPagecoffeeQualita',
-      getID : 'coffeeQualita'
+      getID : 'coffeeQualita',
+      heart : Icon.heart
     },
   ];
 

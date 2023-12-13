@@ -24,7 +24,7 @@ const Icon = {
     snack : require('./Snack.svg').default,
     TrendingBeauty : require('./TrendingBeauty.svg').default,
     BakeryBRead : require('./Bakery_Bread.svg').default,
-    Heart_active : require('./Heart_active.svg').default,
+    heart_active : require('./Heart_active.svg').default,
     star: require('./Star.svg').default,
     arror_right : require('./Arrow - Right 2.svg').default,
     bag : require('./Bag.svg').default,

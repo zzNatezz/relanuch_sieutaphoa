@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Icon from "../../../../imagin/icon/Icon";
 import "./TotalLavazzaTemplate.scss";
 import { Link } from "react-router-dom";
 import homeTotalLavAz from "../StoreInfor/homeTotalLavAz";
-
+import { AppContext } from "../../../../../AppContext/AppContext";
 
 function TotalLavazzaTemplate() {
+  const { updateHeart, cloneHomeLavaza } = useContext(AppContext)
   return (
     <div className="TotalLavazz-container">
       {homeTotalLavAz.map((item, index) => (
@@ -13,8 +14,8 @@ function TotalLavazzaTemplate() {
           <div className="pictures">
           <Link to = {item.link}>
             <img className="avatar" src={item.img} alt="source" /></Link>
-            <div className="heart-background">
-              <img className="heart" src={Icon.heart} alt="" />
+            <div onClick={()=>updateHeart()} className="heart-background">
+              <img className="heart" src={item.heart} alt="heart" />
             </div>
           </div>
           <div className="coffee-NameAndType">
