@@ -14,7 +14,7 @@ function TotalLavazzaTemplate() {
           <div className="pictures">
           <Link to = {item.link}>
             <img className="avatar" src={item.img} alt="source" /></Link>
-            <div onClick={()=>updateHeart()} className="heart-background">
+            <div onClick={()=>updateHeart(index)} className="heart-background">
               <img className="heart" src={item.heart} alt="heart" />
             </div>
           </div>
