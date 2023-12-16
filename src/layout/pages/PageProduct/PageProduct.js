@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../../header/Header";
 import "./PageProduct.scss";
 import Icon from "../../imagin/icon/Icon";
 import ReviewTemplate from "./component/ReviewTemplate";
+import { AppContext } from "../../../AppContext/AppContext";
 
 function PageProduct({itemProductPage}) {
+  const {quality, decisionQualityBtm} = useContext(AppContext)
   return (
         <div>
           <Header />
@@ -25,20 +27,17 @@ function PageProduct({itemProductPage}) {
                     </div>
                     <h2 className="header2">Size/Weight</h2>
                     <div className="quatity-unit">
-                      <select className="number" name="number">
-                        <option value="250">250</option>
-                        <option value="500">500</option>
-                        <option value="750">750</option>
+                      <select disabled className="number" name="number">
+                        <option className="quality-selection">{quality}</option>
                       </select>
-                      <select name="unit" className="unit">
+                      <select disabled name="unit" className="unit">
                         <option value="gam">Gam</option>
-                        <option value="Kilogam">Kg</option>
                       </select>
                     </div>
                     <div className="size">
-                      <button>Small</button>
-                      <button>Medium</button>
-                      <button>Large</button>
+                      <button value='small' onClick={(e)=> decisionQualityBtm(e)}>Small</button>
+                      <button value='medium' onClick={(e) => decisionQualityBtm(e)}>Medium</button>
+                      <button value='large' onClick={(e)=> decisionQualityBtm(e)}>Large</button>
                     </div>
                   </div>
                   <div className="information">
