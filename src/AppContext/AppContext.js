@@ -2,14 +2,13 @@ import React, { createContext, useState } from "react";
 import Icon from "../layout/imagin/icon/Icon";
 import homeTotalLavAz from "../layout/pages/HOME/component/StoreInfor/homeTotalLavAz";
 
-
 export const AppContext = createContext();
 
 export const Contexts = ({children}) => {
  // update Heart
-const [heart, setHeart] = useState('250');
+const [heart, setHeart] = useState(0);
 const [cloneHomeLavaza, setCloneHomeLavaza] = useState(homeTotalLavAz);
-                                   /// --~~~~~~~  ***  ~~~~~~~ -- ///
+                         /// --~~~~~~~  ***  ~~~~~~~ -- ///
 const updateHeart = (i) => {
      const fakeHomeLava = [...cloneHomeLavaza];
      fakeHomeLava[i].heart = fakeHomeLava[i].heart === Icon.heart ? Icon.heart_active : Icon.heart;
@@ -19,27 +18,34 @@ const updateHeart = (i) => {
 }
 
 // Unit Decision
-const [quality, setQualiti] =useState(250);
 
-const decisionQualityBtm = (e) =>{
-     const desirbQuality = document.getElementsByClassName("quality-selection")
-     if(e.target.value === 'small' ){
+const [quality, setQualiti] = useState();
+const [createBackground , setcreateBackground] = useState('') // <-- changBackgroundColor.
+                    /// --~~~~~~~  ***  ~~~~~~~ -- ///
+const decisionQuatityBtm = (e) =>{
+     const desiredQuatities = document.getElementsByClassName("quatity-selection");
+     const currentTarget = e.target.value;
+     if(currentTarget === 'small'){
           const smallSize = 250;
-          desirbQuality.textContent = smallSize;
+          desiredQuatities.textContent = smallSize;
           setQualiti(smallSize);
      }
-     else if(e.target.value === 'medium'){
+     else if(currentTarget === 'medium'){
           const mediumSize = 500;
-          desirbQuality.textContent = mediumSize;
+          desiredQuatities.textContent = mediumSize;
           setQualiti(mediumSize);
      }
-     else if(e.target.value === 'large'){
+     else if(currentTarget === 'large'){
           const largeSize = 750;
-          desirbQuality.textContent = largeSize;
+          desiredQuatities.textContent = largeSize;
           setQualiti(largeSize);
-     };
+     }
+};   
 
+const handleBackground = () =>{
+     createBackground ? setcreateBackground('') : setcreateBackground('changeBackground')
 }
+
 
 
 
@@ -48,7 +54,8 @@ return(
      value={{
       heart, setHeart, updateHeart,
       cloneHomeLavaza, setCloneHomeLavaza,
-      quality, decisionQualityBtm,
+      quality, decisionQuatityBtm,setcreateBackground,handleBackground, 
+      
      }}
      >
         {children}

@@ -6,7 +6,7 @@ import ReviewTemplate from "./component/ReviewTemplate";
 import { AppContext } from "../../../AppContext/AppContext";
 
 function PageProduct({itemProductPage}) {
-  const {quality, decisionQualityBtm} = useContext(AppContext)
+  const {quality, decisionQuatityBtm,handleBackground, createBackground} = useContext(AppContext)
   return (
         <div>
           <Header />
@@ -23,21 +23,21 @@ function PageProduct({itemProductPage}) {
                   <div className="detail">
                     <div className="review">
                       <img src={Icon.star} alt="" />
-                      <p>{itemProductPage.review} 1100 reviews</p>
+                      <p>{itemProductPage.review} (1100 reviews)</p>
                     </div>
                     <h2 className="header2">Size/Weight</h2>
                     <div className="quatity-unit">
                       <select disabled className="number" name="number">
-                        <option className="quality-selection">{quality}</option>
+                        <option className="quatity-selection">{quality}</option>
                       </select>
                       <select disabled name="unit" className="unit">
                         <option value="gam">Gam</option>
                       </select>
                     </div>
                     <div className="size">
-                      <button value='small' onClick={(e)=> decisionQualityBtm(e)}>Small</button>
-                      <button value='medium' onClick={(e) => decisionQualityBtm(e)}>Medium</button>
-                      <button value='large' onClick={(e)=> decisionQualityBtm(e)}>Large</button>
+                      <button className={createBackground || 'changeBackground'} value='small' onClick={(e)=> (decisionQuatityBtm(e), handleBackground())}>Small</button>
+                      <button className={createBackground || 'changeBackground'} value='medium' onClick={(e) => (decisionQuatityBtm(e), handleBackground())}>Medium</button>
+                      <button className={createBackground || 'changeBackground'} value='large' onClick={(e)=> (decisionQuatityBtm(e), handleBackground())}>Large</button>
                     </div>
                   </div>
                   <div className="information">
