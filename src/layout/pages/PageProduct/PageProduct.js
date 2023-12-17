@@ -5,8 +5,10 @@ import Icon from "../../imagin/icon/Icon";
 import ReviewTemplate from "./component/ReviewTemplate";
 import { AppContext } from "../../../AppContext/AppContext";
 
+const buttonList = ['Small','Medium','Large'];
+
 function PageProduct({itemProductPage}) {
-  const {quality, decisionQuatityBtm,handleBackground, createBackground} = useContext(AppContext)
+  const {quality, decisionQuatityBtm, activeClass} = useContext(AppContext)
   return (
         <div>
           <Header />
@@ -35,9 +37,9 @@ function PageProduct({itemProductPage}) {
                       </select>
                     </div>
                     <div className="size">
-                      <button className={createBackground || 'changeBackground'} value='small' onClick={(e)=> (decisionQuatityBtm(e), handleBackground())}>Small</button>
-                      <button className={createBackground || 'changeBackground'} value='medium' onClick={(e) => (decisionQuatityBtm(e), handleBackground())}>Medium</button>
-                      <button className={createBackground || 'changeBackground'} value='large' onClick={(e)=> (decisionQuatityBtm(e), handleBackground())}>Large</button>
+                      {buttonList.map((item,index)=>(
+                        <button className={index === activeClass ? 'changeBackground' : ''} value = {item} onClick={(e)=>(decisionQuatityBtm(e,index))}>{item}</button>
+                      ))}
                     </div>
                   </div>
                   <div className="information">

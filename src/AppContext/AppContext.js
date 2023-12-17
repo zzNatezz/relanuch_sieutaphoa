@@ -20,31 +20,29 @@ const updateHeart = (i) => {
 // Unit Decision
 
 const [quality, setQualiti] = useState();
-const [createBackground , setcreateBackground] = useState('') // <-- changBackgroundColor.
+const [activeClass , setactiveClass] = useState() // <-- changBackgroundColor.
                     /// --~~~~~~~  ***  ~~~~~~~ -- ///
-const decisionQuatityBtm = (e) =>{
+const decisionQuatityBtm = (e,index) =>{
      const desiredQuatities = document.getElementsByClassName("quatity-selection");
      const currentTarget = e.target.value;
-     if(currentTarget === 'small'){
+     if(currentTarget === 'Small'){
           const smallSize = 250;
           desiredQuatities.textContent = smallSize;
           setQualiti(smallSize);
      }
-     else if(currentTarget === 'medium'){
+     else if(currentTarget === 'Medium'){
           const mediumSize = 500;
           desiredQuatities.textContent = mediumSize;
           setQualiti(mediumSize);
      }
-     else if(currentTarget === 'large'){
+     else if(currentTarget === 'Large'){
           const largeSize = 750;
           desiredQuatities.textContent = largeSize;
           setQualiti(largeSize);
      }
+     setactiveClass(index)
 };   
 
-const handleBackground = () =>{
-     createBackground ? setcreateBackground('') : setcreateBackground('changeBackground')
-}
 
 
 
@@ -54,7 +52,7 @@ return(
      value={{
       heart, setHeart, updateHeart,
       cloneHomeLavaza, setCloneHomeLavaza,
-      quality, decisionQuatityBtm,setcreateBackground,handleBackground, 
+      quality, decisionQuatityBtm,setactiveClass, activeClass
       
      }}
      >
