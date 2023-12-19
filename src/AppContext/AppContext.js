@@ -18,9 +18,8 @@ const updateHeart = (i) => {
 }
 
 // Unit Decision
-
 const [quality, setQualiti] = useState();
-const [activeClass , setactiveClass] = useState() // <-- changBackgroundColor.
+const [activeClass , setactiveClass] = useState() // <-- changclassName.
                     /// --~~~~~~~  ***  ~~~~~~~ -- ///
 const decisionQuatityBtm = (e,index) =>{
      const desiredQuatities = document.getElementsByClassName("quatity-selection");
@@ -41,8 +40,10 @@ const decisionQuatityBtm = (e,index) =>{
           setQualiti(largeSize);
      }
      setactiveClass(index)
-};   
-
+};
+     const hanldeSingleClass = (e) =>{
+          const contentText = e.target.textContent
+     setactiveClass(contentText)}
 
 
 
@@ -52,7 +53,7 @@ return(
      value={{
       heart, setHeart, updateHeart,
       cloneHomeLavaza, setCloneHomeLavaza,
-      quality, decisionQuatityBtm,setactiveClass, activeClass
+      quality, decisionQuatityBtm,setactiveClass, activeClass,hanldeSingleClass,
       
      }}
      >

@@ -166,8 +166,17 @@ $color-blue : #77DAE6;
         column-gap: 60px;
         width: 1340px;
         color: $color-text-link;
-        :nth-child(3){
-            color: black;
+        .link {
+            color: grey;
+            text-decoration: none;
+            font-weight: 650;
+            font-size: 20px;
+        }
+        .link-black-text {
+            color: black !important;
+            text-decoration: none;
+            font-weight: 650;
+            font-size: 20px;
         }
     }
     .reviewTemplate{

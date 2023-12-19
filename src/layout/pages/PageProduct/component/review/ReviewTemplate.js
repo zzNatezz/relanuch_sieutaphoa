@@ -1,7 +1,7 @@
 import React from "react";
 import './ReviewTemplate.scss';
-import Picture from "../../../imagin/picture/Picture";
-import Icon from "../../../imagin/icon/Icon";
+import Picture from "../../../../imagin/picture/Picture";
+import Icon from "../../../../imagin/icon/Icon";
 
 const Reviewer = [
     {
@@ -25,7 +25,7 @@ const Reviewer = [
 ]
 
 function ReviewTemplate() {
-    return (  
+    return (
         <>
         {Reviewer.map((item,index)=>(
             <div key={index} className="review-container">
@@ -41,8 +41,9 @@ function ReviewTemplate() {
                     <p>{item.rate.toFixed(1)} Reviews</p>
                 </div>
             </div>
-        ))}
-        </>
+        ))}        
+        </>  
+        
     );
 }
 

@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import Header from "../../header/Header";
 import "./PageProduct.scss";
 import Icon from "../../imagin/icon/Icon";
-import ReviewTemplate from "./component/ReviewTemplate";
+import ReviewTemplate from "./component/review/ReviewTemplate";
 import { AppContext } from "../../../AppContext/AppContext";
+import { Link, Outlet } from "react-router-dom";
 
 const buttonList = ['Small','Medium','Large'];
 
 function PageProduct({itemProductPage}) {
-  const {quality, decisionQuatityBtm, activeClass} = useContext(AppContext)
+  const {quality, decisionQuatityBtm, activeClass, hanldeSingleClass} = useContext(AppContext)
   return (
         <div>
           <Header />
@@ -38,7 +39,7 @@ function PageProduct({itemProductPage}) {
                     </div>
                     <div className="size">
                       {buttonList.map((item,index)=>(
-                        <button className={index === activeClass ? 'changeBackground' : ''} value = {item} onClick={(e)=>(decisionQuatityBtm(e,index))}>{item}</button>
+                        <button key = {index} className={index === activeClass ? 'changeBackground' : ''} value = {item} onClick={(e)=>(decisionQuatityBtm(e,index))}>{item}</button>
                       ))}
                     </div>
                   </div>
@@ -79,13 +80,29 @@ function PageProduct({itemProductPage}) {
               </div>
             </div>
             <div className="review-title">
-              <h3>Description</h3>
-              <h3>Features</h3>
-              <h3>Review (1100)</h3>
-              <h3>Similar</h3>
+              <Link 
+              className= {activeClass === 'Description' ? 'link-black-text' : 'link'} 
+              to = {itemProductPage.link + '/description'}  onClick={(e) => hanldeSingleClass(e)}>
+              Description 
+              </Link>
+              <Link 
+              className={activeClass === 'Features' ? 'link-black-text' : 'link'} 
+              to = {itemProductPage.link + '/features'} onClick={(e) => hanldeSingleClass(e)}>
+              Features
+              </Link>
+              <Link 
+              className={activeClass === 'Review' ? 'link-black-text' : 'link'} 
+              to = {itemProductPage.link + '/review'} onClick={(e) => hanldeSingleClass(e)}>
+              Review
+              </Link>
+              <Link 
+              className={activeClass === 'Similar' ? 'link-black-text' : 'link'} 
+              to = {itemProductPage.link + '/similar'} onClick={(e) => hanldeSingleClass(e)}>
+              Similar
+              </Link> 
             </div>
             <div className="reviewTemplate">
-              <ReviewTemplate />
+            <Outlet />
             </div>
           </div>
         </div>
