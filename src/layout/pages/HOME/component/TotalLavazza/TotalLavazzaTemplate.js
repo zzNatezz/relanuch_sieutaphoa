@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import Icon from "../../../../imagin/icon/Icon";
 import "./TotalLavazzaTemplate.scss";
 import { Link } from "react-router-dom";
-import homeTotalLavAz from "../StoreInfor/homeTotalLavAz";
 import { AppContext } from "../../../../../AppContext/AppContext";
+import homeTotalLavAz from "../../../../../MainStorage/homeTotalLavAz";
 
 function TotalLavazzaTemplate() {
   const { updateHeart } = useContext(AppContext)

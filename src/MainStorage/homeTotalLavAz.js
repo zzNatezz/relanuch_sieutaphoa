@@ -1,5 +1,6 @@
-import Icon from "../../../../imagin/icon/Icon";
-import Picture from "../../../../imagin/picture/Picture";
+import Icon from "../layout/imagin/icon/Icon";
+import Picture from "../layout/imagin/picture/Picture";
+
 
 const homeTotalLavAz = [
     {
@@ -9,7 +10,7 @@ const homeTotalLavAz = [
       price: 47.0,
       review: "4.3",
       link : '/productcoffeeBeans',
-      getID : 'coffeeBeans',
+      MiniTitle : 'Lavazza Coffee Blends ',
       heart : Icon.heart
     },
     {
@@ -19,7 +20,7 @@ const homeTotalLavAz = [
       price: 53.0,
       review: "3.4",
       link: '/productPageCoffeeBlends',
-      getID : 'coffeeBlends',
+      MiniTitle : 'Coffee Beans Espresso',
       heart : Icon.heart
     },
     {
@@ -29,7 +30,7 @@ const homeTotalLavAz = [
       price: 99.99,
       review: "5.0",
       link : '/productPagecoffeeEspressBlack',
-      getID : 'coffeeEspressBlack',
+      MiniTitle : 'Qualità Oro Mountain',
       heart : Icon.heart
     },
     {
@@ -39,9 +40,11 @@ const homeTotalLavAz = [
       price: 38.65,
       review: "4.4",
       link : '/productPagecoffeeQualita',
-      getID : 'coffeeQualita',
+      MiniTitle : 'Qualità Oro Mountain Grown ',
       heart : Icon.heart
     },
   ];
 
   export default homeTotalLavAz;
+
+  export const ProductInCart = [];

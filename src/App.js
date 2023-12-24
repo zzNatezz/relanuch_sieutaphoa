@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import {Routes , Route} from 'react-router-dom'
 import Home from './layout/pages/HOME/Home';
 import ProfileUser from './layout/pages/profileUser/ProfileUser';
 import PageProduct from './layout/pages/PageProduct/PageProduct';
-import homeTotalLavAz from './layout/pages/HOME/component/StoreInfor/homeTotalLavAz';
 import DescriptionProduct from './layout/pages/PageProduct/component/description/DescriptionProduct';
 import FeatureProduct from './layout/pages/PageProduct/component/feature/FeatureProduct';
 import ReviewTemplate from './layout/pages/PageProduct/component/review/ReviewTemplate';
 import SimilarProduct from './layout/pages/PageProduct/component/similar/SimilarProduct';
+import { AppContext } from './AppContext/AppContext';
 
 function App() {
+  const {cloneHomeLavaza} = useContext(AppContext)
   return (
     <div className="App">
       <Routes>
         <Route path = '/' element = {<Home />} />
-        {homeTotalLavAz.map((item,i)=>(
+        {cloneHomeLavaza.map((item,i)=>(
           <Route key={i} path = {item.link} element = {<PageProduct itemProductPage = {
             item} />}>
               <Route path='description' element = {<DescriptionProduct />}/>

@@ -2,21 +2,25 @@ import React, { useContext } from "react";
 import Header from "../../header/Header";
 import "./PageProduct.scss";
 import Icon from "../../imagin/icon/Icon";
-import ReviewTemplate from "./component/review/ReviewTemplate";
 import { AppContext } from "../../../AppContext/AppContext";
 import { Link, Outlet } from "react-router-dom";
 
 const buttonList = ['Small','Medium','Large'];
 
 function PageProduct({itemProductPage}) {
-  const {quality, decisionQuatityBtm, activeClass, hanldeSingleClass} = useContext(AppContext)
+  const {quality, decisionQuatityBtm, 
+        activeClass, hanldeSingleClass,
+        updateHeart,cloneHomeLavaza,
+        updateAddtoCart,
+      } = useContext(AppContext);
+  const IndexProduct = cloneHomeLavaza.indexOf(itemProductPage)
   return (
         <div>
           <Header />
           <div className="product-container">
             <div className="product-link">
               Departments &#62;coffee &#62; Coffee Beans &#62;
-              <span className="span">{itemProductPage.getID}</span>
+              <span className="span">{itemProductPage.MiniTitle}</span>
             </div>
             <div className="product-main">
               <img className="main-img" src={itemProductPage.img} alt="img-product" />
@@ -68,11 +72,16 @@ function PageProduct({itemProductPage}) {
                       </div>
                       <h1 className="total-price">
                         {" "}
-                        Total : {itemProductPage.price - itemProductPage.price * 0.1}{" "}
+                        Total : {(itemProductPage.price - itemProductPage.price * 0.1).toFixed(2)}
                       </h1>
                       <div className="add-to-cart">
-                        <button>Add to Cart</button>
-                        <img src={Icon.heart} alt="tim" />
+                        <button
+                        onClick={() =>updateAddtoCart(itemProductPage) }
+                        >
+                          Add to Cart
+                        </button>
+                        <img onClick={() => updateHeart(IndexProduct)}
+                         src={itemProductPage.heart} alt="heart" />
                       </div>
                     </div>
                   </div>

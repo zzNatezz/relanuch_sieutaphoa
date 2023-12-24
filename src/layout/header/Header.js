@@ -5,6 +5,7 @@ import "./Header.scss"
 import { Header_Typpy } from './Pop_up/Header_Typpy/Header_Typpy';
 import { Link } from 'react-router-dom';
 import { AppContext } from '../../AppContext/AppContext';
+import TippyMiniAddToCart from './Pop_up/Header_Typpy/Tippy_MiniAddToCart/Tippy_MiniAddToCart';
 
 
 function Header() {
@@ -34,9 +35,11 @@ function Header() {
 
                 </div>
                 <div className='compo_r_s'>
-                    <div><img className="icon-header" src={Icon.heart} alt="heart" /> {heart}</div>
+                    <div className='heart-container'>
+                        <img className="icon-header" src={Icon.heart} alt="heart" /> {heart}
+                    </div>
                     <div className='compo_buy'>
-                        <img className="icon-header" src={Icon.buy} alt="buy" />    $ 63.0
+                        <TippyMiniAddToCart />
                     </div>
                 </div>
                 <div className='compo_r_t'>

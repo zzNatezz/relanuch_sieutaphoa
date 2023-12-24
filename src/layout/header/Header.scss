@@ -54,7 +54,7 @@
             @include icon_color_headr();
             display: flex;
             column-gap: 20px !important;
-            div{
+            .heart-container{
                 @include align_Icon_Text_5px();
             }
             .compo_buy{
