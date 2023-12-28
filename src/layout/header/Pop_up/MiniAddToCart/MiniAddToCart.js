@@ -10,7 +10,7 @@ function MiniAddToCart() {
     <div className="mini-container">
       <div className="mini-header">
         <div > You have <b> {addToCart.length}</b> item(s)</div>
-        <Link >See all</Link>
+        <Link to = '/AddtoCartPage' >See all</Link>
       </div>
       <div className="mini-product">
         {addToCart.map((item,i)=>(
@@ -37,7 +37,8 @@ function MiniAddToCart() {
         <h1 >Total Price:</h1>
         <h1 >{(totalPrice).toFixed(2)} </h1>
       </div>
-      <button className="btn-checkout">Check Out All</button>
+      <Link to='/AddtoCartPage'><button className="btn-checkout">Check Out All</button></Link>
+      
     </div>
   );
 }

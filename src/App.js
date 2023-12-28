@@ -9,6 +9,7 @@ import FeatureProduct from './layout/pages/PageProduct/component/feature/Feature
 import ReviewTemplate from './layout/pages/PageProduct/component/review/ReviewTemplate';
 import SimilarProduct from './layout/pages/PageProduct/component/similar/SimilarProduct';
 import { AppContext } from './AppContext/AppContext';
+import AddtoCartPage from './layout/pages/ProductAddtoCART/AddtoCartPage';
 
 function App() {
   const {cloneHomeLavaza} = useContext(AppContext)
@@ -25,6 +26,7 @@ function App() {
               <Route path='similar' element={<SimilarProduct />} />
             </Route>
         ))}
+        <Route path='/AddtoCartPage' element = {<AddtoCartPage />} />
         <Route path = '/profileUser' element = {<ProfileUser />} />
       </Routes>
     </div>
