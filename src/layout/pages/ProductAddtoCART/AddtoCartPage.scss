@@ -26,12 +26,142 @@ $color-blue : #77DAE6;
             flex-direction: column;
             row-gap: 30px;
             align-content: start;
+            border: 2px solid rgb(69, 217, 35);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
             .addToCart-list-container{
                 display: flex;
                 text-align: start;
-                border-right:  1px solid $color_grey;
+                border-bottom:  4px solid $color_grey;
+                padding-bottom: 5px;
+                .addtoCart-imagine{
+                    width: 175px;
+                    height: 172px;
+                }
+                .addTocart-information{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                    .addtoCart-headLine{
+                        font-size: 20px;
+                        padding-top: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 650px;
+                    }
+                    .addToCart-price{
+                        display: flex;
+                        column-gap: 10px;
+                        font-size: 23px;
+                        color: grey;
+                        .addtoCart-status{
+                            border-left: 2px solid grey;
+                            font-size: 23px;
+                            color: greenyellow;
+                            padding-left: 10px;
+                        }
+                    }
+                    .addToCart-setUp{
+                        display: flex;
+                        width: 650px;
+                        justify-content: space-between;
+                        .addtoCart-quantity{
+                            display: flex;
+                            column-gap: 50px;
+                            align-items: center;
+                            .addtoCart-option{
+                                color: grey;
+                                border: 2px solid grey;
+                                padding-inline: 10px;
+                                border-radius: 10px;
+                                padding-block: 5px;
+                            }
+                            .addtoCart-control-quantity{
+                                display: flex;
+                                align-items: center;
+                                column-gap: 10px;
+                                border: 2px solid grey;
+                                border-radius: 10px;
+                                padding-inline: 15px;
+                                padding-block: 7px;
+                            }
+                        }
+                        .addtoCart-heart-and-delete{
+                            display: flex;
+                            column-gap: 50px;
+                            .addtoCart-heart{
+                                display: flex;
+                                column-gap: 10px;
+                                align-items: center;                               
+                            }
+                            .addtoCart-delete{
+                                display: flex;
+                                column-gap: 10px;
+                                align-items:center ;
+                                padding : 5px;
+                                border-radius: 10px;
+                                background-color: white;
+                                border-color: whitesmoke;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            .addtoCart-sum{
+                display: flex;
+                justify-content: space-between;
+                a{
+                    color: #77DAE6;
+                    position: relative;
+                    font-size: 23px;
+                }
+                .addtoCart-totalPrice{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                    article{
+                        display: flex;
+                        column-gap: 150px;
+                        justify-content: space-between;
+                    }
+                }
+                
+            }
+        }
+        .addtoCart-checkout{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+            border: 2px solid rgb(69, 217, 35);
+            border-radius: 20px;
+            height: fit-content;
+            padding: 30px;
+            article{
+                display: flex;
+                justify-content: space-between;
+                width: 300px;
+            }
+            .checkout-shpping{
+                border-bottom: 2px solid grey;
+                padding-bottom: 10px;
+            }
+            .btn-checkout{
+                padding-block: 20px;
+                padding-inline: 60px;
+                border-radius: 20px;
+                border-color:bisque;
+                background-color: bisque;
+                color: rgb(115, 88, 34);
+                font-weight: 1000px;
             }
         }
     }
+}
+
+.AddtoCartPage-emptypage{
+    margin-top: 20px;
 }
 

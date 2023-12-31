@@ -12,6 +12,7 @@ const Picture = {
     hussain : require('./delwarHussain.png'),
     hussen : require('./JakirHussen.png'),
     ahmed : require('./JubedAhmed.png'),
+    emptyCart : require('./empty-cart.png')
     
 }
 

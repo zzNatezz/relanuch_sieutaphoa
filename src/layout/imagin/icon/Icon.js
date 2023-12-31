@@ -32,6 +32,9 @@ const Icon = {
     starthalf : require('./Star-half.svg').default,
     startNone : require('./StarNone.svg').default,
     startReview : require('./StarReview.svg').default,
+    plusIcon : require('./Plus.svg').default,
+    subtractIcon : require('./subtract.svg').default,
+    deleteIcon : require('./Delete.svg').default,
     
 }
 export default Icon;

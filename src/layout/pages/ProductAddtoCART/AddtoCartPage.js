@@ -1,36 +1,21 @@
-import React from "react";
-import Header from '../../header/Header'
-import './AddtoCartPage.scss'
+import React, { useContext } from "react";
+import Header from "../../header/Header";
+import "./AddtoCartPage.scss";
 import homeTotalLavAz from "../../../MainStorage/homeTotalLavAz";
+import Icon from "../../imagin/icon/Icon";
+import { Link } from "react-router-dom";
+import { AppContext } from "../../../AppContext/AppContext";
+import NoEmptyPage from "./NoEmptyPage";
+import EmptyPage from "./EmptyPage";
 
-function AddtoCartPage(){
-    return(
-        <>
-        <Header />
-        <div className="addToCart-container">
-            <div className="text-link"> Home &#62; checkout </div>
-            <div className="addtoCart-and-check-container">
-                <div className="addToCart-list">
-                    {homeTotalLavAz.map((item,index)=>(
-                        <div key={index} className = 'addToCart-list-container'>
-                            <img src={item.img} alt={'product' + index} 
-                            className="productImagine" />
-                            <div className="addTocart-information">
-                                <h1 className="addToCart-list-name">
-                                    {item.name}
-                                </h1>
-                                <div className="addToCart-price">{(item.price)-((item.price)*0.1)}</div>
-                            </div>
-                            
-                        </div>
-                    ))}
-                </div>
-                <div>sasas</div>
-            </div>
-        </div>
-        
-        </>
-    )
-};
+function AddtoCartPage() {
+  const {addToCart} = useContext(AppContext)
+  return (
+    <>
+      <Header />
+      {addToCart.length === 0 ? <EmptyPage /> : <NoEmptyPage />}
+    </>
+  );
+}
 
-export default AddtoCartPage
+export default AddtoCartPage;

@@ -46,5 +46,3 @@ const homeTotalLavAz = [
   ];
 
   export default homeTotalLavAz;
-
-  export const ProductInCart = [];

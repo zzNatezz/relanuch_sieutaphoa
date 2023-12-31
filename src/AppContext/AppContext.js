@@ -47,14 +47,13 @@ const decisionQuatityBtm = (e,index) =>{
 
 // AddtoCart Function
 const [addToCart , setAddtoCart] = useState([])
-     /// --~~~~~~~  ***  ~~~~~~~ -- ///
-const updateAddtoCart = (e) =>{
-     const Action = [...addToCart, e]
-     console.log(Action);
-     setAddtoCart(Action)
-}
+     /// --~~~~~~~  ***  ~~~~~~~-- ///
+const updateAddtoCart = (e) =>{ 
+     const Action = [...addToCart, e];
+     setAddtoCart(Action);
+};
+
 const totalPrice = [...addToCart].reduce((x,y)=>(x + (y.price-y.price*0.1)+10), 0);
-console.log(totalPrice);
 
 return(
      <AppContext.Provider
@@ -63,7 +62,7 @@ return(
       cloneHomeLavaza, setCloneHomeLavaza,
       quality, decisionQuatityBtm,setactiveClass, activeClass,hanldeSingleClass,
       addToCart,setAddtoCart,updateAddtoCart,
-      totalPrice,     
+      totalPrice,  
      }}
      >
         {children}

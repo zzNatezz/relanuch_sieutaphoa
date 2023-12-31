@@ -26,6 +26,18 @@
             .product-mini-img{
                 width: 175px;
             }
+            .product-mini-price-and-quantity{
+                display: flex;
+                justify-content: space-between;
+                width: 170px;
+                .product-mini-quantity{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: white;
+                    text-align: center;
+                }
+            }
         }
     }
     .mini-product::-webkit-scrollbar{
@@ -55,4 +67,12 @@
         text-decoration-line: underline;
         color: grey;
     }
+}
+
+//Empty Cart
+.EmptyCart{
+    background-color:rgb(233, 200, 200);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top : 40px;
 }

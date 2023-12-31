@@ -9,7 +9,7 @@ import TippyMiniAddToCart from './Pop_up/Header_Typpy/Tippy_MiniAddToCart/Tippy_
 
 
 function Header() {
-    const {heart} = useContext(AppContext)
+    const {heart,addToCart} = useContext(AppContext)
     return (
         <>
         <div className='header-background'>
@@ -38,8 +38,7 @@ function Header() {
                     <div className='heart-container'>
                         <img className="icon-header" src={Icon.heart} alt="heart" /> {heart}
                     </div>
-                    <div className='compo_buy'>
-                        <TippyMiniAddToCart />
+                    <div className='compo_buy'>                        <TippyMiniAddToCart />
                     </div>
                 </div>
                 <div className='compo_r_t'>
