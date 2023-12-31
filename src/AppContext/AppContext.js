@@ -12,9 +12,9 @@ const [cloneHomeLavaza, setCloneHomeLavaza] = useState(homeTotalLavAz);
 const updateHeart = (i) => {
      const fakeHomeLava = [...cloneHomeLavaza];
      fakeHomeLava[i].heart = fakeHomeLava[i].heart === Icon.heart ? Icon.heart_active : Icon.heart;
-      setCloneHomeLavaza(fakeHomeLava);
-      const heart_plus = fakeHomeLava.filter((item) => item.heart === Icon.heart_active);
-      setHeart(heart_plus.length);
+     setCloneHomeLavaza(fakeHomeLava);
+     const heart_plus = fakeHomeLava.filter((item) => item.heart === Icon.heart_active);
+     setHeart(heart_plus.length);
 }
 
 // UNIT_DECISION
@@ -42,7 +42,7 @@ const decisionQuatityBtm = (e,index) =>{
      setactiveClass(index)
 };
      const hanldeSingleClass = (e) =>{
-          const contentText = e.target.textContent
+     const contentText = e.target.textContent
      setactiveClass(contentText)}
 
 // AddtoCart Function
@@ -52,6 +52,14 @@ const updateAddtoCart = (e) =>{
      const Action = [...addToCart, e];
      setAddtoCart(Action);
 };
+const decreaseAddtoCart = (e) =>{
+     const target = addToCart.find(i => i===e)
+     const index = addToCart.indexOf(target)
+     addToCart.splice(index,1)
+     const cloneAddtoCart = [...addToCart]
+     setAddtoCart(cloneAddtoCart);                
+}
+
 
 const totalPrice = [...addToCart].reduce((x,y)=>(x + (y.price-y.price*0.1)+10), 0);
 
@@ -62,7 +70,8 @@ return(
       cloneHomeLavaza, setCloneHomeLavaza,
       quality, decisionQuatityBtm,setactiveClass, activeClass,hanldeSingleClass,
       addToCart,setAddtoCart,updateAddtoCart,
-      totalPrice,  
+      totalPrice,
+      decreaseAddtoCart,
      }}
      >
         {children}

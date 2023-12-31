@@ -5,9 +5,8 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../../AppContext/AppContext";
 
 function NoEmptyPage() {
-  const {addToCart, updateHeart, cloneHomeLavaza} = useContext(AppContext);
+  const {addToCart,decreaseAddtoCart,updateAddtoCart} = useContext(AppContext);
   const uniqueAddtoCart = [...new Set(addToCart)];
-  console.log(cloneHomeLavaza);
   return (
     <>
       <div className="addToCart-container">
@@ -34,13 +33,25 @@ function NoEmptyPage() {
                       <div className="addtoCart-quantity">
                         <option className="addtoCart-option" value="Lavaza">LavAzza &#8744;</option>
                         <div className="addtoCart-control-quantity">
-                          <img className="substract" src={Icon.subtractIcon} alt="subtract" /> 
-                          {addToCart.filter(x=> x === item).length} 
-                          <img className="plus" src={Icon.plusIcon} alt="plus" /></div>
+                          <img 
+                          onClick ={()=>decreaseAddtoCart(item)}
+                          className="substract"
+                          src={Icon.subtractIcon}
+                          alt="subtract"
+                          />
+                          {addToCart.filter(x => x === item).length} 
+                          <img
+                          onClick={()=> updateAddtoCart(item)}
+                          className="plus" 
+                          src={Icon.plusIcon} 
+                          alt="plus" 
+                          />
+                          </div>
                       </div>
                       <div className="addtoCart-heart-and-delete">
                             <div
                             className="addtoCart-heart">
+                              {/* <!-- heart at img area below is not completed, can't provide onClick event on it.PLEASE FIX IT --> */}
                               <img 
                               src={item.heart} alt="heart" />
                               Save

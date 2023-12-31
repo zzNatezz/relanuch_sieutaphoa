@@ -68,7 +68,7 @@ function PageProduct({itemProductPage}) {
                     </div>
                     <div className="payment">
                       <div className="price">
-                        {itemProductPage.price} <p> 10% </p>
+                        ${itemProductPage.price} <p> 10% </p>
                       </div>
                       <h1 className="total-price">
                         {" "}

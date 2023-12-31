@@ -3,14 +3,12 @@ import React, { useContext } from "react";
 import Icon from "../../../../imagin/icon/Icon";
 import MiniAddToCart from "../../MiniAddToCart/MiniAddToCart";
 import { AppContext } from "../../../../../AppContext/AppContext";
-import EmptyCart from "../../MiniAddToCart/EmptyCart";
 
 function TippyMiniAddToCart() {
     const {addToCart, totalPrice} = useContext(AppContext)
     return (
         <Tippy
         interactive
-        // visible
         placement = 'bottom'
         render = {attrs =>(
             <div className="box" tabIndex= "-1"{...attrs}><MiniAddToCart /></div>
