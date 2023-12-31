@@ -45,7 +45,7 @@ const decisionQuatityBtm = (e,index) =>{
      const contentText = e.target.textContent
      setactiveClass(contentText)}
 
-// AddtoCart Function
+// AddtoCart Functions
 const [addToCart , setAddtoCart] = useState([])
      /// --~~~~~~~  ***  ~~~~~~~-- ///
 const updateAddtoCart = (e) =>{ 
@@ -58,7 +58,15 @@ const decreaseAddtoCart = (e) =>{
      addToCart.splice(index,1)
      const cloneAddtoCart = [...addToCart]
      setAddtoCart(cloneAddtoCart);                
-}
+};
+
+const handleDeleteAddtoCart = (e) =>{
+     const target = addToCart.filter(i => i === e);
+     const remainAddtoCart = addToCart.filter(itemInCart => target.includes(itemInCart) === false);
+      //with the function above, we can code it as below
+      // addtoCart.filter(itemIncart => !target.includes(itemInCart))
+     setAddtoCart(remainAddtoCart);
+};
 
 
 const totalPrice = [...addToCart].reduce((x,y)=>(x + (y.price-y.price*0.1)+10), 0);
@@ -71,7 +79,7 @@ return(
       quality, decisionQuatityBtm,setactiveClass, activeClass,hanldeSingleClass,
       addToCart,setAddtoCart,updateAddtoCart,
       totalPrice,
-      decreaseAddtoCart,
+      decreaseAddtoCart,handleDeleteAddtoCart
      }}
      >
         {children}

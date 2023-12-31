@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../../AppContext/AppContext";
 
 function NoEmptyPage() {
-  const {addToCart,decreaseAddtoCart,updateAddtoCart} = useContext(AppContext);
+  const {addToCart,decreaseAddtoCart,updateAddtoCart,handleDeleteAddtoCart} = useContext(AppContext);
   const uniqueAddtoCart = [...new Set(addToCart)];
   return (
     <>
@@ -56,7 +56,9 @@ function NoEmptyPage() {
                               src={item.heart} alt="heart" />
                               Save
                               </div>
-                            <button className="addtoCart-delete">
+                            <button
+                            onClick={() =>handleDeleteAddtoCart(item)}
+                            className="addtoCart-delete">
                               <img src={Icon.deleteIcon} alt="delete" />Delete
                             </button>
                       </div>
