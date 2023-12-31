@@ -5,7 +5,7 @@ import Icon from "../../../imagin/icon/Icon";
 import ListGrocery from "./Grocery/ListGrocery";
 import ListBeauty from "./Beauty/ListBeauty";
 
-function Header_Typpy ({Title, Returnlist}) {
+function HeaderTyppy ({Title, Returnlist}) {
     if(Title === 'Departments'){
         Returnlist = <ListDepart/>
     }
@@ -28,4 +28,4 @@ function Header_Typpy ({Title, Returnlist}) {
     )};
 
 
-export {Header_Typpy} ;
+export {HeaderTyppy} ;

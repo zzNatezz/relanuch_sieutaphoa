@@ -2,7 +2,7 @@
 import "../Department/Header_popUp.scss";
 import { FreshProduce,Grocery,BakeryBread,Frozen,Snacks,Candy,CooktailsAndCoffe,Beverages } from "./listDetailGrocery";
 import Icon from '../../../../imagin/icon/Icon'
-import {OneArray, TwoArray} from '../../TemplateListHeader/TemplateListHeader'
+import {TwoArray} from '../../TemplateListHeader/TemplateListHeader'
 
 function ListGrocery() {
   return (

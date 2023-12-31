@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import Icon from '../imagin/icon/Icon';
 import Picture from '../imagin/picture/Picture';
 import "./Header.scss"
-import { Header_Typpy } from './Pop_up/Header_Typpy/Header_Typpy';
+import { HeaderTyppy } from './Pop_up/Header_Typpy/Header_Typpy';
 import { Link } from 'react-router-dom';
 import { AppContext } from '../../AppContext/AppContext';
 import TippyMiniAddToCart from './Pop_up/Header_Typpy/Tippy_MiniAddToCart/Tippy_MiniAddToCart';
 
 
 function Header() {
-    const {heart,addToCart} = useContext(AppContext)
+    const {heart} = useContext(AppContext)
     return (
         <>
         <div className='header-background'>
@@ -19,12 +19,12 @@ function Header() {
                     <div>Grocerymart</div></Link>
                 </div>
                 <div className='compo_l_s'>
-                    <Header_Typpy
+                    <HeaderTyppy
                     Title = "Departments"
                      />
-                    <Header_Typpy
+                    <HeaderTyppy
                     Title="Grocery" />
-                    <Header_Typpy
+                    <HeaderTyppy
                     Title= "Beauty"
                      /> 
                 </div>
