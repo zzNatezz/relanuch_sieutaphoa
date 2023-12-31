@@ -66,7 +66,7 @@ const handleDeleteAddtoCart = (e) =>{
       //with the function above, we can code it as below
       // addtoCart.filter(itemIncart => !target.includes(itemInCart))
      setAddtoCart(remainAddtoCart);
-};
+};``
 
 
 const totalPrice = [...addToCart].reduce((x,y)=>(x + (y.price-y.price*0.1)+10), 0);
