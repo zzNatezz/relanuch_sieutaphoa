@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../../AppContext/AppContext";
 
 function NoEmptyPage() {
-  const {addToCart,decreaseAddtoCart,updateAddtoCart,handleDeleteAddtoCart} = useContext(AppContext);
+  const {addToCart,decreaseAddtoCart,updateAddtoCart,handleDeleteAddtoCart,checkOutAllCart} = useContext(AppContext);
   const uniqueAddtoCart = [...new Set(addToCart)];
   return (
     <>
@@ -102,7 +102,12 @@ function NoEmptyPage() {
                 <div>Estimated Total</div>
                 <h1>$201.65</h1>
             </article>
-            <button className="btn-checkout">Continue to checkout</button>
+            <Link to='/'>
+              <button 
+              onClick={() =>checkOutAllCart()}
+              className="btn-checkout">Continue to checkout</button>
+            </Link>
+            
           </div>
         </div>
       </div>

@@ -68,6 +68,17 @@ const handleDeleteAddtoCart = (e) =>{
      setAddtoCart(remainAddtoCart);
 };
 
+const checkOutAllCart = () =>{
+     let alertPage = window.confirm('Do you want to check out ?')
+     if(alertPage === true){
+          const emptyArray = []
+          setAddtoCart(emptyArray)
+     }
+     else{
+          alert('Enjoy your shopping') //<-- still update when completed
+     }
+}
+
 
 const totalPrice = [...addToCart].reduce((x,y)=>(x + (y.price-y.price*0.1)+10), 0);
 
@@ -79,7 +90,7 @@ return(
       quality, decisionQuatityBtm,setactiveClass, activeClass,hanldeSingleClass,
       addToCart,setAddtoCart,updateAddtoCart,
       totalPrice,
-      decreaseAddtoCart,handleDeleteAddtoCart
+      decreaseAddtoCart,handleDeleteAddtoCart,checkOutAllCart
      }}
      >
         {children}

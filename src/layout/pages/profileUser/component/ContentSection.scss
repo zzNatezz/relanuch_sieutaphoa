@@ -1,0 +1,43 @@
+$color_grey : #F6F6F6;
+$color-text-link : #9E9DA8;
+$color-blue : #77DAE6;
+@mixin backgroundColorandRadius{
+    background-color: $color_grey;
+    border-radius: 20px;
+}
+@mixin accountDetail{
+
+}
+.section-container{
+    @include backgroundColorandRadius();
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap : 30px;
+    .wallet-section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        .wallet-header{
+            text-align: start;
+        }
+        .wallet-visaCard{
+            display: flex;
+            column-gap: 20px;
+        }
+    }
+    .account-section{
+        .account-header{
+            text-align: left;
+        }
+        .account-details{
+            display: flex;
+            column-gap: 30px;
+            .email{
+                display: flex;
+                column-gap: 10px;
+                width: 445px;
+            }
+        }
+    }
+}

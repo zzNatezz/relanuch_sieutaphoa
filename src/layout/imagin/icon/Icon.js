@@ -35,6 +35,16 @@ const Icon = {
     plusIcon : require('./Plus.svg').default,
     subtractIcon : require('./subtract.svg').default,
     deleteIcon : require('./Delete.svg').default,
+    dangerCircle : require('./Danger Circle.svg').default,
+    downLoad : require('./Downlaod.svg').default,
+    gift : require('./gift.svg').default,
+    infoSquare : require('./Info Square.svg').default,
+    location : require('./Location.svg').default,
+    message : require('./Message.svg').default,
+    personal : require('./Personal.svg').default,
+    shieldDone : require('./Shield Done.svg').default,
+    mainAvatar : require('./mainAvatar.svg').default,
+    calling : require('./Calling.svg').default,
     
 }
 export default Icon;

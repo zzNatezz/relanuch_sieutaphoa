@@ -12,7 +12,11 @@ const Picture = {
     hussain : require('./delwarHussain.png'),
     hussen : require('./JakirHussen.png'),
     ahmed : require('./JubedAhmed.png'),
-    emptyCart : require('./empty-cart.png')
+    emptyCart : require('./empty-cart.png'),
+    addNewVisa : require('./addNewVisa.png'),
+    backgroundAvatar : require('./backgroundAvata.png'),
+    visaCard1 : require('./visaCard1.png'),
+    visaCard2 : require('./visaCard2.png'),
     
 }
 

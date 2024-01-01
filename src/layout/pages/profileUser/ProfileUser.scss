@@ -1,0 +1,65 @@
+$color_grey : #F6F6F6;
+$color-text-link : #9E9DA8;
+$color-blue : #77DAE6;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.main-container{
+    width: 100%;
+    display: flex;
+    margin: 0 auto 20px;
+    .header{
+        width: 100%;
+    }
+    .profile-container{
+        display: flex;
+        column-gap: 30px;
+        width: 1340px;
+        align-content: center;
+        height: fit-content;
+        .aside-container{
+            background-color: $color_grey;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: 20px;
+            padding-bottom: 30px;
+            .aside-avatar{
+                position: relative;
+                display: flex;
+                .backgroundAvatar{
+                    background-size: contain;
+                    width: 390px;                    object-fit: none;
+                }
+                .avatarAndName{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform:translate(-50%,-50%);
+                    .mainAvatar{
+                        height: 115px;
+                        width: 115px;
+                    }
+                    .nameAndregis{
+                        position: relative;
+                        top: -10px;
+                        color: white;
+                        div{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .aside-list{
+                margin-top: -50px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+                padding-left: 10px;
+            }
+        }
+    }
+}
