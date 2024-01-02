@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 
 function ProfileUser() {
   return (
-    <div className="main-container">
+    <div className="mainProfileUser-container">
       <div className="header">
         <Header />
       </div>
