@@ -10,6 +10,10 @@ import ReviewTemplate from './layout/pages/PageProduct/component/review/ReviewTe
 import SimilarProduct from './layout/pages/PageProduct/component/similar/SimilarProduct';
 import { AppContext } from './AppContext/AppContext';
 import AddtoCartPage from './layout/pages/ProductAddtoCART/AddtoCartPage';
+import PersonalInfor from './layout/pages/profileUser/component/PersonalInfor/PersonalInfor';
+import Address from './layout/pages/profileUser/component/Address/Address';
+import CoomsAndPrivacy from './layout/pages/profileUser/component/CommsAndPrivacy/CommsAndPrivacy';
+import ContentSection from './layout/pages/profileUser/component/ContentSection/ContentSection';
 
 function App() {
   const {cloneHomeLavaza} = useContext(AppContext)
@@ -27,7 +31,12 @@ function App() {
             </Route>
         ))}
         <Route path='/AddtoCartPage' element = {<AddtoCartPage />} />
-        <Route path = '/profileUser' element = {<ProfileUser />} />
+        <Route path = '/profileUser' element = {<ProfileUser />} >
+          <Route path='' element = {<ContentSection />} />
+          <Route path='personal' element={<PersonalInfor />} />
+          <Route path='addresses' element={<Address />} />
+          <Route path='commAndPrivacy' element={<CoomsAndPrivacy />} />
+        </Route>
       </Routes>
     </div>
   );

@@ -2,7 +2,8 @@ import React from "react";
 import Header from "../../header/Header";
 import "./ProfileUser.scss";
 import ListSideContent from "./component/ListSideContent";
-import ContentSection from "./component/ContentSection";
+import ContentSection from "./component/ContentSection/ContentSection";
+import { Outlet } from "react-router-dom";
 
 function ProfileUser() {
   return (
@@ -13,7 +14,7 @@ function ProfileUser() {
       <div className="profile-container">
         <ListSideContent />
         <section>
-            <ContentSection />
+           <Outlet />
         </section>
       </div>
     </div>

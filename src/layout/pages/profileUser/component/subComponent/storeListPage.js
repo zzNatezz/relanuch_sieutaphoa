@@ -4,14 +4,17 @@ export const manageAccount = [
     {
         symbol : Icon.personal,
         subtitle : 'Personal info',
+        link : 'personal',
     },
     {
         symbol : Icon.location,
         subtitle : 'Addresses',
+        link : 'addresses',
     },
     {
         symbol : Icon.message,
         subtitle : 'Communications & Privacy',
+        link : 'commAndPrivacy'
     },
 ];
 export const myItems = [
@@ -43,4 +46,23 @@ export const customerService = [
         symbol: Icon.dangerCircle,
         subtitle : 'Terms of Use',
     },
+]
+
+export const personalInfor = [
+    {
+        header : 'Full name',
+        type : 'text'
+    },
+    {
+        header : 'Email',
+        type : 'email'
+    },
+    {
+        header : 'Phone number',
+        type : 'text'
+    },
+    {
+        header : 'Password',
+        type : 'password'
+    }
 ]

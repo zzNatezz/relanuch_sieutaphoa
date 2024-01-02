@@ -28,7 +28,10 @@ function ListSideContent() {
           </section>
           <section className="aside-list">
             <div className="aside-manageAccount">
-              <AsideProfileList Tittle="Manage Account" array={manageAccount} />
+                <AsideProfileList
+                Tittle="Manage Account"
+                array={manageAccount} />
+              
             </div>
             <div className="aside-myItem">
                 <AsideProfileList 

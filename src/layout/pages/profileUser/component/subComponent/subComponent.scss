@@ -1,0 +1,50 @@
+//aside css
+.list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+    .aside-listStructural{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        img{
+            width: 25px;
+            padding: 2.5px;
+        }
+        .nav-link{
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            :hover {
+                color: aqua;
+            }
+        } 
+        .nav-link-active{
+            background-color: white;
+            border-radius: 30px;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            :hover {
+                color: aqua;
+            }       
+        }
+    }
+}
+
+// AcountDetail css
+.detail-container{
+    display: flex;
+    column-gap: 30px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    width: 410px;
+    img{
+        width: 24px;
+    }
+    div{
+        text-align: left;
+    }
+}

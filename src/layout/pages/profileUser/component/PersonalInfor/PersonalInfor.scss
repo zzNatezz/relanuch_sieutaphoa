@@ -1,0 +1,55 @@
+$color_grey : #F6F6F6;
+$color-text-link : #9E9DA8;
+$color-blue : #77DAE6;
+.personal-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    align-items: flex-start;
+    background-color: $color_grey;
+    border-radius: 20px;
+    .personal-header{
+        display: flex;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .main-inputCustom-container{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        .input1{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .input2{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+    }
+    .cancel-and-save{
+        display: flex;
+        padding-left: 70%;
+        button{
+            width: 120px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .btn-cancel{
+            border: none;
+            background-color: $color_grey;
+        }
+        .btn-save{
+            background-color: yellow;
+            border-color: yellow;
+            color: rgb(24, 91, 95);
+        }
+    }
+}

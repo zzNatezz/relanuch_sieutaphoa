@@ -1,0 +1,11 @@
+.inputCustom-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    input{
+        width: 400px;
+        height: 30px;
+        border-radius: 10px;
+    }
+}
