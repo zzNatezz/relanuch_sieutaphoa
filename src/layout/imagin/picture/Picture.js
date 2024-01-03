@@ -17,6 +17,7 @@ const Picture = {
     backgroundAvatar : require('./backgroundAvata.png'),
     visaCard1 : require('./visaCard1.png'),
     visaCard2 : require('./visaCard2.png'),
+    loginLogo : require('./LoginLogo.png'),
     
 }
 

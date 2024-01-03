@@ -14,6 +14,9 @@ import PersonalInfor from './layout/pages/profileUser/component/PersonalInfor/Pe
 import Address from './layout/pages/profileUser/component/Address/Address';
 import CoomsAndPrivacy from './layout/pages/profileUser/component/CommsAndPrivacy/CommsAndPrivacy';
 import ContentSection from './layout/pages/profileUser/component/ContentSection/ContentSection';
+import LoginPage from './layout/pages/Login/LoginPage';
+import SignIn from './layout/pages/Login/component/SignIn';
+import SignUp from './layout/pages/Login/component/SignUp';
 
 function App() {
   const {cloneHomeLavaza} = useContext(AppContext)
@@ -36,6 +39,10 @@ function App() {
           <Route path='personal' element={<PersonalInfor />} />
           <Route path='addresses' element={<Address />} />
           <Route path='commAndPrivacy' element={<CoomsAndPrivacy />} />
+        </Route>
+        <Route path='/loginPage' element = {<LoginPage />}>
+          <Route path='' element = {<SignIn />} />
+          <Route path='SignUp' element = {<SignUp/>} />
         </Route>
       </Routes>
     </div>

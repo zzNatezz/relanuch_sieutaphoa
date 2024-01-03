@@ -45,6 +45,8 @@ const Icon = {
     shieldDone : require('./Shield Done.svg').default,
     mainAvatar : require('./mainAvatar.svg').default,
     calling : require('./Calling.svg').default,
+    googleLine : require('./google-line 1.svg').default,
+    lock : require('./Lock.svg').default,
     
 }
 export default Icon;
