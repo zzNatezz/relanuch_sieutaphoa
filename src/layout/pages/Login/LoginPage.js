@@ -11,7 +11,6 @@ function LoginPage() {
       <div className="login-logo">
         <img src={Picture.loginLogo} alt="loginLogo" />
         <div>
-          {" "}
           The best of luxury brand values, high quality products, and innovative
           services
         </div>

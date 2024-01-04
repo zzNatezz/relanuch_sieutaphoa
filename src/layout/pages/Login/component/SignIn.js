@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../LoginPage.scss";
 import Icon from "../../../imagin/icon/Icon";
 import { Link } from "react-router-dom";
+import { AppContext } from "../../../../AppContext/AppContext";
 
 function SignIn() {
+  const {handleSignIn} = useContext(AppContext)
   return (
     <div className="signIn-container">
       <div className="signIn-top">
@@ -24,11 +26,11 @@ function SignIn() {
         <input 
         className="signIn-email" 
         type="text" 
-        placeholder="   Type your email"  />
+        placeholder="Type your email"  />
         <input 
         className="signIn-password" 
         type="text"
-        placeholder="   Password"
+        placeholder="Password"
          />
       </div>
       <div className="signIN-checkboxAndForgot">
@@ -39,7 +41,9 @@ function SignIn() {
         <Link>Recovery Password</Link>
       </div>
       <div className="signIn-btn">
-        <button className="btn-login">Login</button>
+        <button 
+        onClick={(e) => handleSignIn(e)}
+         className="btn-login">Login</button>
         <button className="btn-loginWithmail">
             <img src={Icon.googleLine} alt="x" />
             Sign in with Gmail

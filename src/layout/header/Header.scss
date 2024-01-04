@@ -24,7 +24,7 @@
     background-color: #EEEEEE;
     display: flex;
     justify-content: space-around;
-    padding-block: 5px;
+    padding-block: 10px;
     .compo_l{
         display: flex;
         column-gap: 40px;
@@ -65,5 +65,18 @@
         }
         .compo_r_t{
             margin-top: 15px;
+            a{
+                display: block;
+                position: relative;
+                bottom: 5px;
+                button{
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    background-color: antiquewhite;
+                    border-color: antiquewhite;
+                    color:rgb(66, 233, 91);
+                }
+            }
+
         }
 }

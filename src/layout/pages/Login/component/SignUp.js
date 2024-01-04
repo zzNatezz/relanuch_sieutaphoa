@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../LoginPage.scss";
 import Icon from "../../../imagin/icon/Icon";
 import { Link } from "react-router-dom";
+import { AppContext } from "../../../../AppContext/AppContext";
 
 function SignUp() {
+  const { handleSignUp } = useContext(AppContext)
   return (
     <div className="login-SignUp">
       <div className="login-top">
@@ -16,18 +18,30 @@ function SignUp() {
       </div>
       <div className="login-fill">
         <div>
-          <input className="input" type="email" placeholder="    Email" />
+          <input
+  
+          className="input" 
+          type="email"
+          placeholder="Email"
+          id="signUp-email"
+           />
           <img src={Icon.message} alt="x" />
         </div>
         <div>
-          <input className="input" type="text" placeholder="    Password" />
+          <input 
+          className="input" 
+          type="text" 
+          placeholder="Password"
+          id="signUp-password"
+           />
           <img src={Icon.lock} alt="x" />
         </div>
         <div>
           <input
             className="input"
             type="text"
-            placeholder="    Confirm password"
+            placeholder="Confirm password"
+            id="signUp-confirmPassWord"
           />
           <img src={Icon.lock} alt="x" />
         </div>
@@ -40,7 +54,11 @@ function SignUp() {
         </div>
       </div>
       <div className="login-btn">
-        <button className="btn-signUp">Sign Up</button>
+        <button
+        onClick={()=>handleSignUp()}
+        className="btn-signUp">
+          Sign Up
+          </button>
         <button className="btn-signWithmail">
           <img src={Icon.googleLine} alt="x" />
           Sign in with Gmail

@@ -45,4 +45,7 @@ const homeTotalLavAz = [
     },
   ];
 
-  export default homeTotalLavAz;
+
+export default homeTotalLavAz;
+
+

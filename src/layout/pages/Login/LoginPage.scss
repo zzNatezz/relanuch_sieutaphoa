@@ -54,6 +54,7 @@ $color_grey :#9E9DA8;
                 display: flex;
                 align-items: center;
                 .input{
+                    padding-left: 10px;
                     width: 450px;
                     height: 40px;
                     border-radius: 15px;
@@ -156,6 +157,7 @@ $color_grey :#9E9DA8;
             flex-direction: column;
             gap: 30px;
             input{
+                padding-left: 10px;
                 height: 40px;
                 border-radius: 10px;
                 border : 1px solid $color_grey;
