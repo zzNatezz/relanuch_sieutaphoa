@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../../../AppContext/AppContext";
 
 function SignIn() {
-  const {handleSignIn} = useContext(AppContext)
+  const { getLocalLoginState, handleSignIn } = useContext(AppContext);
   return (
     <div className="signIn-container">
       <div className="signIn-top">
@@ -23,35 +23,33 @@ function SignIn() {
         </div>
       </div>
       <div className="signIn-mid">
-        <input 
-        className="signIn-email" 
-        type="text" 
-        placeholder="Type your email"  />
-        <input 
-        className="signIn-password" 
-        type="text"
-        placeholder="Password"
-         />
+        <input
+          className="signIn-email"
+          type="text"
+          placeholder="Type your email"
+        />
+        <input className="signIn-password" type="text" placeholder="Password" />
       </div>
       <div className="signIN-checkboxAndForgot">
         <div>
-            <input className="signIn-checkbox" type="checkbox" />
-            <label htmlFor="">Set as default card</label>
+          <input className="signIn-checkbox" type="checkbox" />
+          <label htmlFor="">Set as default card</label>
         </div>
         <Link>Recovery Password</Link>
       </div>
       <div className="signIn-btn">
-        <button 
-        onClick={(e) => handleSignIn(e)}
-         className="btn-login">Login</button>
+        <button onClick={(e) => handleSignIn(e)} className="btn-login">
+          Login
+        </button>
+
         <button className="btn-loginWithmail">
-            <img src={Icon.googleLine} alt="x" />
-            Sign in with Gmail
+          <img src={Icon.googleLine} alt="x" />
+          Sign in with Gmail
         </button>
       </div>
       <div className="signIn-bottom">
         <div>Don’t have an account yet?</div>
-        <Link to='SignUp'>Sign Up</Link>
+        <Link to="SignUp">Sign Up</Link>
       </div>
     </div>
   );

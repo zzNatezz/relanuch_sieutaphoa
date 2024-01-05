@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Picture from "../../../imagin/picture/Picture";
 import AsideProfileList from "./subComponent/AsideProfileList";
 import {
@@ -8,8 +8,11 @@ import {
     customerService,
   } from "./subComponent/storeListPage";
 import Icon from "../../../imagin/icon/Icon";
+import { Link } from "react-router-dom";
+import { AppContext } from "../../../../AppContext/AppContext";
 
 function ListSideContent() {
+  const {handleLogut} = useContext(AppContext)
     return ( 
          <aside className="aside-container">
           <section className="aside-avatar">
@@ -51,6 +54,9 @@ function ListSideContent() {
                 />
             </div>
           </section>
+          <button
+          onClick={()=>handleLogut()}
+           className="logOut">Logout</button>
         </aside>
     );
 }

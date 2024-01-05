@@ -185,6 +185,12 @@ $color_grey :#9E9DA8;
             flex-direction: column;
             width: 450px;
             gap: 30px;
+            .signIn-btn-link{
+                button{
+                    width: 450px;   
+                }
+                
+            }
             button{
                 padding: 5px;
                 border-radius: 10px;

@@ -17,27 +17,27 @@ const [activeClass , setactiveClass] = useState();// <-- set class Name.
 // AddtoCart Functions
 const [addToCart , setAddtoCart] = useState([])
 
-//Login Page
-const [login , setLogin] = useState(false)
+//Login state
+const getLocalLoginState = JSON.parse(localStorage.getItem('loginState')||'false')
+const [login , setLogin] = useState(getLocalLoginState) //<-- this is login state
 
 //Add User
 const userLocal = JSON.parse(localStorage.getItem('userData')) || [];  
 const [user , setUser] = useState(userLocal)
 
-
           /// --~~~~~~~  ***  ~~~~~~~ -- /// <--Set Heart
 const updateHeart = (i) => {
-     if (login === true ){
+     if (getLocalLoginState === true ){
           const fakeHomeLava = [...cloneHomeLavaza];
           fakeHomeLava[i].heart = fakeHomeLava[i].heart === Icon.heart ? Icon.heart_active : Icon.heart;
           setCloneHomeLavaza(fakeHomeLava);
           const heart_plus = fakeHomeLava.filter((item) => item.heart === Icon.heart_active);
           setHeart(heart_plus.length);
-          console.log(login);
      }
      else{
           window.location.href='/loginPage'
      }
+     
  
 }
 
@@ -68,7 +68,7 @@ const hanldeSingleClass = (e) =>{
 
      /// --~~~~~~~  ***  ~~~~~~~-- /// <-- add to cart functino
 const updateAddtoCart = (e) =>{ 
-     if(login === true){
+     if(getLocalLoginState === true){
           const Action = [...addToCart, e];
           setAddtoCart(Action);
      }
@@ -112,10 +112,11 @@ const checkOutAllCart = () =>{
      /// --~~~~~~~  ***  ~~~~~~~-- /// <-- sum
 const totalPrice = [...addToCart].reduce((x,y)=>(x + (y.price-y.price*0.1)+10), 0);
 
-     /// --~~~~~~~  ***  ~~~~~~~-- /// <-- check status user.
+     /// --~~~~~~~  ***  ~~~~~~~-- /// <-- control login state 
+     /// CÁI FUNTION NÀY CHƯA ĐƯỢC SỬ DỤNG
 const handleLogin =() =>{
      const userData = localStorage.getItem('userData')
-     const isAvailable = userData.name.length === 0 ? false : true;
+     const isAvailable = userData[0].name.length === 0 || undefined ? false : true;
      setLogin(isAvailable)
 }
      /// --~~~~~~~  ***  ~~~~~~~-- /// <-- signUp.
@@ -128,13 +129,18 @@ const handleSignUp = () =>{
           passWord  : userPassword,
      };
      const addUser = [...user, userData]
+     const isDuplicate = userLocal.filter(item => item.name === userID)
      if(userConfirmPass !== userPassword || userPassword === '' || userConfirmPass === ''){
           alert('please check you password')
+
+     }
+     else if (isDuplicate.length>0){
+          alert('user id is existing, please try other')
+
      }
      else{
           localStorage.setItem('userData', JSON.stringify(addUser)) 
           setUser(addUser);
-          console.log(addUser);
           alert('Sign Up sucessfully');
           window.location.href = '/loginPage'         
      }
@@ -146,12 +152,11 @@ const handleSignIn = (e) =>{
           name : document.querySelector('.signIn-email').value,
           passWord  : document.querySelector('.signIn-password').value,
      }
-     console.log(currentUser);
      const isCorrect = userLocal.filter(item => item.name === currentUser.name && item.passWord === currentUser.passWord)
      if(isCorrect.length > 0){
-          window.location.href = '/';
+          setLogin(localStorage.setItem('loginState', 'true'));
           alert('Login successfully');
-          setLogin(true)
+          window.location.href = '/'
      }
      else{
           alert('Email is incorrect. Please check it')
@@ -160,6 +165,11 @@ const handleSignIn = (e) =>{
      
 }
 
+/// --~~~~~~~  ***  ~~~~~~~-- /// <-- Log Out button
+const handleLogut = () => {
+     localStorage.setItem('loginState', JSON.stringify(false))
+     window.location.href = '/'
+}
 
 return(
      <AppContext.Provider
@@ -170,8 +180,10 @@ return(
       addToCart, setAddtoCart, updateAddtoCart,
       totalPrice,
       decreaseAddtoCart,handleDeleteAddtoCart,checkOutAllCart,
-      handleLogin,login,
-      handleSignUp,handleSignIn
+      handleLogin,login, //<-- FUNCTION HANDLELOGIN CHUA DUOJC SU DUNG
+      handleSignUp,handleSignIn,
+      getLocalLoginState,
+      handleLogut,
      }}
      >
         {children}
